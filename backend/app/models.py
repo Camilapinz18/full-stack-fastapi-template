@@ -4,6 +4,13 @@ from pydantic import EmailStr
 from sqlmodel import Field, Relationship, SQLModel
 
 
+class AddressPost(SQLModel):
+    street: str
+    number: int
+    municipality: str
+    province: str
+    country: str
+
 # Shared properties
 class UserBase(SQLModel):
     email: EmailStr = Field(unique=True, index=True, max_length=255)

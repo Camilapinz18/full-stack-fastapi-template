@@ -71,11 +71,11 @@ const AddItem = ({ isOpen, onClose }: AddItemProps) => {
       >
         <ModalOverlay />
         <ModalContent as="form" onSubmit={handleSubmit(onSubmit)}>
-          <ModalHeader>Add Item</ModalHeader>
+          <ModalHeader>Buscar dirección</ModalHeader>
           <ModalCloseButton />
           <ModalBody pb={6}>
             <FormControl isRequired isInvalid={!!errors.title}>
-              <FormLabel htmlFor="title">Title</FormLabel>
+              <FormLabel htmlFor="title">Calle</FormLabel>
               <Input
                 id="title"
                 {...register("title", {
@@ -89,7 +89,7 @@ const AddItem = ({ isOpen, onClose }: AddItemProps) => {
               )}
             </FormControl>
             <FormControl mt={4}>
-              <FormLabel htmlFor="description">Description</FormLabel>
+              <FormLabel htmlFor="description">Número</FormLabel>
               <Input
                 id="description"
                 {...register("description")}
